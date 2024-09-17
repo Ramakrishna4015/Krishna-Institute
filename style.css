@@ -53,14 +53,26 @@ nav{
     font-size: 20px;
     font-weight: 500;
     padding: 10px 15px;
-    border: 2px solid #fafbfc;     /* Visible border */
+    border: 2px solid #eaebec;     /* Visible border */
     background-color: transparent; /* No background color initially */
     transition: background-color 0.4s, color 0.4s; /* Smooth background fill and text color change */
-    border-radius: 5px;            /* Rounded corners for the button */
+    border-radius: 15px;            /* Rounded corners for the button */
 }
     
 .nav-links a:hover{
     color: rgb(251, 251, 253);
     background-color: rgb(49, 45, 45);
+}
+/* Set specific dimensions for the background image */
+.background-image {
+    position: relative;
+    width: 100%;           /* Full width of the container */
+    height: 400px;         /* Set a specific height */
+}
+
+.background-image img {
+    width: 100%;           /* Full width of the container */
+    height: 100%;          /* Full height of the section */
+    object-fit: fil;   /* Keeps the image inside the section, without cropping */
 }
 
