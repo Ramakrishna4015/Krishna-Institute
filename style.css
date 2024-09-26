@@ -56,20 +56,100 @@ nav{
     height: 100%;          /* Full height of the section */
     object-fit: fil;   /* Keeps the image inside the section, without cropping */
 }
-/* Text overlay styling */
+/* Text overlay styling 
 .overlay-text{
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%); /* center the text */
+    transform: translate(-50%,-50%); 
     color: #fff;
-    text-align:left
+    text-align:left;
+    display: flex; 
+    align-items: flex-start;
 }
 .overlay-text h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; 
 }
 .overlay-text p {
     font-size: 1.5rem;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; 
+}
+    */
+    /* Grid container on top of image */
+.content-grid {
+    position: absolute;
+    top: 80%; /* Adjust top distance to fit the layout */
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal containers */
+    gap: 20px;
+    padding: 0 50px; /* Adjust padding for left and right spacing */
+    /* display: flex;
+    align-items: flex-end; */
+    
+}
+
+
+/* Modal container - hidden by default */
+.modal {
+    display: none; /* Hidden initially */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Login form styling */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #555;
 }
